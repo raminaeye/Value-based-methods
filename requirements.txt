@@ -1,7 +1,9 @@
 # Direct dependencies of env.py, util/, and the notebooks.
-# unityagents ships with the legacy ML-Agents Python API (mlagents 0.15.x),
-# which provides the UnityEnvironment / brain API used here.
-mlagents==0.15.0
+# unityagents provides the legacy `unityagents` import used by env.py
+# (the code uses the legacy Unity ML-Agents Python API: UnityEnvironment /
+# BrainInfo reset/step protocol). mlagents 0.15.x provides no `unityagents`
+# module, so it must not be used here.
+unityagents>=0.4.0
 torch==1.6.0
 numpy>=1.11.0
 matplotlib
